@@ -3,6 +3,19 @@
         max-width: 960px;
         padding: 0 15px;
     }
+    .education {
+        &__info {
+            gap: 90px;
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .education {
+        &__info {
+            gap: 10px;
+        }
+    }
 }
 
 @media screen and (max-width: 992px) {
@@ -11,6 +24,15 @@
     }
     .summary__photo {
         max-width: 380px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .education {
+        &__info {
+            grid-template-columns: minmax(250px, 600px);
+            gap: 10px;
+        }
     }
 }
 
@@ -30,6 +52,17 @@
         }
         &__title {
             font-size: 36px;
+        }
+    }
+    .education {
+        &__title {
+            font-size: 36px;
+        }
+        &__info {
+            padding: 0 35px;
+        }
+        .dividing-line {
+            margin: 20px auto 40px;;
         }
     }
 }
@@ -52,6 +85,13 @@
                 transform: translateX(-50%);
             }
         }
+        .dividing-line {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &__title {
+            text-align: center;
+        }
     }
 }
 @media screen and (max-width: 576px) {
@@ -71,6 +111,9 @@
     .summary__title {
         font-size: 26px;
     }
+    .education__title {
+        font-size: 26px;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -84,5 +127,23 @@
         &__photo {
             width: 100%;
         }
+        .dividing-line {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .education {
+        &__info {
+            padding: 0 15px;
+        }
+        &__subtitle {
+            font-size: 14px;
+        }
+        .dividing-line {
+            margin: 10px auto 20px;;
+        }
+    }
+    .education-descr__title {
+        font-size: 16px;
     }
 }
