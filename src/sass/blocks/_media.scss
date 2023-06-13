@@ -42,6 +42,28 @@
     }
 }
 
+@media screen and (max-width: 1030px) {
+    .contacts {
+        &__subtitle {
+            text-align: center;
+            &:before {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        &__title {
+            text-align: center;
+        }
+        .dividing-line {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &__photo {
+         display: none;
+        }
+    }
+}
+
 @media screen and (max-width: 992px) {
     .container {
         max-width: 720px;
@@ -144,6 +166,11 @@
     .hobbies__list {
         grid-template-columns: 350px;
     }
+    .contacts {
+        &__form {
+            grid-template: 45px minmax(143px, 190px) 45px / repeat(2, minmax(150px, 300px));
+        }
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -164,7 +191,9 @@
     .education__title,
     .skills__title,
     .languages__title,
-    .jobs__title {
+    .jobs__title,
+    .hobbies__title,
+    .contacts__title {
         font-size: 26px;
     }
 }
@@ -224,12 +253,32 @@
             margin: 10px auto 20px;
         }
     }
-    .jobs {
+    .jobs,
+    .hobbies {
         &__subtitle {
             font-size: 14px;
         }
         .dividing-line {
             margin: 10px auto 20px;
+        }
+    }
+    .contacts {
+        &__subtitle {
+            font-size: 14px;
+        }
+        &__form {
+            display: flex;
+            flex-direction: column;
+        }
+        &__input {
+            height: 45px;
+        }
+        &__textarea {
+            height: 143px;
+        }
+        &__triggers {
+            grid-template-columns: auto;
+            gap: 15px;
         }
     }
 }
