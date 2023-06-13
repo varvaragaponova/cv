@@ -31,3 +31,13 @@ p {
     margin-bottom: 20px;
     border-top: 3px solid $main-color;
 }
+
+body.no_scroll {
+    height: 100vh;
+    overflow-y: hidden;
+    background: rgba(41, 41, 41, 0.6);
+}
+
+html {
+    scroll-behavior: smooth;
+}
