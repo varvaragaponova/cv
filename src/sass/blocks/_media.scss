@@ -9,9 +9,28 @@
         }
     }
     .skills__list {
-        grid-template-columns: repeat(3, 270px);
-        grid-template-rows: repeat(3, 270px);
+        grid-template-columns: repeat(auto-fit, 270px);
         justify-content: center;
+    }
+    .hobbies__list {
+        grid-template: repeat(3, 80px) / repeat(2, 300px);
+    }
+    .jobs {
+        &__wrapper {
+            grid-template-columns: repeat(auto-fit, 280px);
+            grid-auto-rows: 280px;
+            justify-content: center;
+            .horizonal,
+            .vertical {
+                grid-row: unset;
+                grid-column: unset;
+            }
+        }
+        &__item {
+            img {
+                object-fit: cover;
+            }
+        }
     }
 }
 
@@ -20,13 +39,6 @@
         &__info {
             gap: 10px;
         }
-    }
-}
-
-@media screen and (max-width: 1020px) {
-    .skills__list {
-        grid-template-columns: repeat(3, 270px);
-        grid-template-rows: repeat(3, 270px);
     }
 }
 
@@ -40,6 +52,9 @@
     .education__info {
         padding: 0 10px;
     }
+    .hobbies__list {
+        grid-template: repeat(3, 80px) / repeat(2, 250px);
+    }
 }
 
 @media screen and (max-width: 900px) {
@@ -49,9 +64,9 @@
             gap: 10px;
         }
     }
-    .skills__list {
-        grid-template-columns: repeat(2, 270px);
-        grid-template-rows: repeat(4, 270px);
+    .hobbies__list {
+        grid-template-columns: 550px;
+        gap: 20px;
     }
 }
 
@@ -95,6 +110,9 @@
             gap: 35px;
         }
     }
+    .hobbies__list {
+        grid-template-columns: 450px;
+    }
 }
 
 @media screen and (max-width: 640px) {
@@ -123,11 +141,8 @@
             text-align: center;
         }
     }
-}
-
-@media screen and (max-width: 590px) {
-    .skills__list {
-        grid-template-columns: repeat(1, 270px);
+    .hobbies__list {
+        grid-template-columns: 350px;
     }
 }
 
@@ -145,20 +160,20 @@
     .promo__link {
         margin-top: 32px;
     }
-    .summary__title {
-        font-size: 26px;
-    }
-    .education__title {
-        font-size: 26px;
-    }
-    .skills__title {
-        font-size: 26px;
-    }
-    .languages__title {
+    .summary__title,
+    .education__title,
+    .skills__title,
+    .languages__title,
+    .jobs__title {
         font-size: 26px;
     }
 }
 
+@media screen and (max-width: 500px) {
+    .hobbies__list {
+        grid-template-columns: 290px;
+    }
+}
 @media screen and (max-width: 480px) {
     .promo__subtitle {
         max-width: 250px;
@@ -208,5 +223,19 @@
         .dividing-line {
             margin: 10px auto 20px;
         }
+    }
+    .jobs {
+        &__subtitle {
+            font-size: 14px;
+        }
+        .dividing-line {
+            margin: 10px auto 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .hobbies__list {
+        grid-template-columns: 170px;
     }
 }
