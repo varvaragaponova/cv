@@ -89,6 +89,12 @@
             margin: 20px auto 40px;;
         }
     }
+    .languages {
+        &__list {
+            grid-template: repeat(2,minmax(70px,auto)) / minmax(200px, 350px);
+            gap: 35px;
+        }
+    }
 }
 
 @media screen and (max-width: 640px) {
@@ -148,6 +154,9 @@
     .skills__title {
         font-size: 26px;
     }
+    .languages__title {
+        font-size: 26px;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -181,6 +190,18 @@
         font-size: 16px;
     }
     .skills {
+        &__subtitle {
+            font-size: 14px;
+        }
+        .dividing-line {
+            margin: 10px auto 20px;
+        }
+    }
+    .languages {
+        padding-top: 40px;
+        &__item_line {
+            max-width: 94vw;
+        }
         &__subtitle {
             font-size: 14px;
         }
